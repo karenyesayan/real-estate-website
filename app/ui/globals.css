@@ -1,0 +1,220 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-[1310px] desktop:max-w-[1626px] px-[0.9375rem];
+  }
+  .btn-primary {
+    @apply whitespace-nowrap py-3.5 desktop:py-[18px] px-5 desktop:px-6 text-sm desktop:text-lg not-italic font-medium leading-[150%] desktop:leading-[150%] rounded-lg desktop:rounded-[10px] outline outline-1 outline-signal-black bg-graphite-black transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:bg-violet-600;
+  }
+}
+
+*,
+*::before,
+*::after {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  --scrollbarBG: #cfd8dc;
+  --thumbBG: #90a4ae;
+  scrollbar-color: #666 #201c29;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+a {
+  text-decoration-line: none;
+}
+
+html {
+  height: 100%;
+}
+
+html,
+body {
+  line-height: 1;
+}
+
+body {
+  color: var(--Absolute-White, #fff);
+  background: var(--Grey-08, #141414);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  min-height: 100%;
+}
+
+.slider-controler {
+  position: relative;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 1919px) {
+  .slider-controler {
+    padding-top: 16px;
+  }
+}
+
+.slider-controler .slider-arrow {
+  background: var(--Grey-10, #1a1a1a);
+  padding: 14px;
+  border-radius: 69px;
+  outline: var(--Grey-15, #262626) solid 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-controler .slider-arrow:hover {
+  background: #262626;
+  outline: #333333 solid 1px;
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+@media (max-width: 1919px) {
+  .slider-controler .slider-arrow {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+
+.swiper-button-disabled {
+  background: transparent !important;
+  color: #808080;
+}
+
+.pagination {
+  position: relative;
+  width: 15rem !important;
+  bottom: 1rem;
+  color: var(--Grey-60, #999);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+@media (min-width: 0px) and (max-width: 1023px) {
+  .pagination {
+    font-size: 14px;
+    bottom: 0;
+    gap: 4px;
+    width: 48px !important;
+  }
+}
+
+@media (min-width: 1023px) and (max-width: 1919px) {
+  .pagination {
+    font-size: 16px;
+  }
+}
+
+.swiper-pagination-current {
+  color: var(--Absolute-White, #fff);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+@media (min-width: 0px) and (max-width: 1023px) {
+  .swiper-pagination-current {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1023px) and (max-width: 1919px) {
+  .swiper-pagination-current {
+    font-size: 16px;
+  }
+}
+
+.imageSwiper {
+  height: 61.04712042%;
+  width: 100%;
+}
+
+@media (min-width: 767px) and (max-width: 1919px) {
+  .imageSwiper {
+    height: 507px;
+  }
+}
+
+.imageSwiper2 {
+  height: 134px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px;
+  background: #141414;
+  border: 1px solid #262626;
+  border-radius: 12px;
+}
+
+@media (min-width: 479px) and (max-width: 1919px) {
+  .imageSwiper2 {
+    height: 94px;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 479px) {
+  .imageSwiper2 {
+    height: 61px;
+    padding: 10px;
+  }
+}
+
+.swiper-pagination-bullet {
+  display: block;
+  border-radius: 60px;
+  background: #4d4d4d;
+  width: 20px;
+  height: 5px;
+}
+
+@media (min-width: 0px) and (max-width: 1919px) {
+  .swiper-pagination-bullet {
+    width: 11.17px;
+    height: 3px;
+  }
+}
+
+.swiper-pagination-bullet:nth-child(n + 7) {
+  display: none;
+}
+
+.swiper-pagination-bullet-active {
+  display: block;
+  background: #703bf7;
+  border-radius: 60px;
+  width: 20px;
+  height: 5px;
+}
+
+@media (min-width: 0px) and (max-width: 1919px) {
+  .swiper-pagination-bullet-active {
+    width: 11.17px;
+    height: 3px;
+  }
+}
