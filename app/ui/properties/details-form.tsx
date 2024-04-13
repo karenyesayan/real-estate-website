@@ -6,14 +6,14 @@ import clsx from "clsx";
 import Link from "next/link";
 import Heading from "../page-heading";
 
-export const DetailsForm = () => {
+export const DetailsForm = ({ name }: { name: string }) => {
   const [agreed, setAgreed] = useState(false);
 
   return (
     <section className="container flex flex-col xl:flex-row gap-10 xl:gap-[60.1px] desktop:gap-[93px] pt-20 xl:pt-[120px] desktop:pt-[150px]">
       <div className="xl:w-[57.405%] desktop:w-[55.032%]">
         <Heading
-          heading="Inquire About Seaside Serenity Villa"
+          heading={`Inquire About ${name}`}
           paragraph="Interested in this property? Fill out the form below, and our real estate experts will get back to you with more details, including scheduling a viewing and answering any questions you may have."
         />
       </div>
@@ -107,7 +107,7 @@ export const DetailsForm = () => {
                 id="selected-property"
                 name="selected-property"
                 className="w-full h-full rounded-md desktop:rounded-lg border-0 bg-graphite-black bg-none py-[16.8px] desktop:py-6 px-5 text-[#666] ring-1 ring-inset ring-signal-black focus:ring-2 focus:ring-inset focus:ring-indigo-600 not-italic font-medium text-sm desktop:text-lg leading-5 desktop:leading-5 placeholder:text-white"
-                placeholder="Seaside Serenity Villa, Malibu, California"
+                placeholder={`${name}, Malibu, California`}
               />
               <div className="max-[376px]:hidden absolute right-5 inset-y-0 flex items-center ps-5 desktop:ps-6 pointer-events-none">
                 <MapPinIcon className="w-5 desktop:w-6 h-5 desktop:h-6" />

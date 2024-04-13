@@ -2,12 +2,18 @@ import Link from "next/link";
 import Heading from "../page-heading";
 import { formatCurrency } from "@/app/lib/utils";
 
-export const PricingDetails = () => {
+export const PricingDetails = ({
+  name,
+  price,
+}: {
+  name: string;
+  price: number;
+}) => {
   return (
     <section className="container flex flex-col gap-10 xl:gap-[60px] desktop:gap-20 pt-20 xl:pt-[120px] desktop:pt-[150px]">
       <Heading
         heading="Comprehensive Pricing Details"
-        paragraph="At Estatein, transparency is key. We want you to have a clear understanding of all costs associated with your property investment. Below, we break down the pricing for Seaside Serenity Villa to help you make an informed decision"
+        paragraph={`At Estatein, transparency is key. We want you to have a clear understanding of all costs associated with your property investment. Below, we break down the pricing for ${name} to help you make an informed decision`}
       />
       <div className="flex flex-col gap-[30px] xs:gap-10 desktop:gap-[50px]">
         <div className="max-sm:px-5 max-sm:flex-col flex items-start sm:items-center gap-2.5 sm:gap-4 desktop:gap-5 rounded-lg desktop:rounded-xl ring-1 ring-inset ring-signal-black bg-graphite-black py-6 lg:py-5 desktop:py-[30px] not-italic font-medium text-sm desktop:text-lg leading-[21px] default:leading-[27px] text-[#999]">
@@ -23,7 +29,7 @@ export const PricingDetails = () => {
               Listing Price
             </span>
             <p className="not-italic text-2xl laptop:text-3xl desktop:text-[40px] leading-9 laptop:leading-[45px] desktop:leading-[60px] font-semibold">
-              ${formatCurrency(1250000)}
+              ${formatCurrency(price)}
             </p>
           </div>
           <div className="flex max-w-[1045px] desktop:max-w-[1326px] gap-5 laptop:gap-10 desktop:gap-[50px] flex-col flex-grow">
@@ -50,7 +56,7 @@ export const PricingDetails = () => {
                       </span>
                       <div className="flex flex-row items-center gap-3 desktop:gap-4">
                         <span className="not-italic font-semibold text-lg laptop:text-xl desktop:text-2xl leading-[27px] laptop:leading-[30px] desktop:leading-9">
-                          ${formatCurrency(25000)}
+                          ${formatCurrency((price / 100) * 2)}
                         </span>
                         <span className="max-md:max-w-full max-lg:max-w-[237px] py-1.5 desktop:py-2 px-3 desktop:px-3.5 bg-graphite-black ring-1 ring-inset ring-signal-black rounded-md laptop:rounded-[28px] not-italic font-medium text-sm desktop:text-lg leading-[21px] desktop:leading-[27px] text-[#999]">
                           Based on the sale price and local regulations
@@ -96,7 +102,7 @@ export const PricingDetails = () => {
                       </span>
                       <div className="flex flex-row items-center gap-3 desktop:gap-4">
                         <span className="not-italic font-semibold text-lg laptop:text-xl desktop:text-2xl leading-[27px] laptop:leading-[30px] desktop:leading-9">
-                          ${formatCurrency(3000)}
+                          ${formatCurrency((price / 100) * 0.096)}
                         </span>
                         <span className="py-1.5 desktop:py-2 px-3 desktop:px-3.5 bg-graphite-black ring-1 ring-inset ring-signal-black rounded-md laptop:rounded-[28px] not-italic font-medium text-sm desktop:text-lg leading-[21px] desktop:leading-[27px] text-[#999]">
                           Annual cost for comprehensive property insurance
@@ -148,7 +154,7 @@ export const PricingDetails = () => {
                       </span>
                       <div className="flex flex-row items-center gap-3 desktop:gap-4">
                         <span className="not-italic font-semibold text-lg laptop:text-xl desktop:text-2xl leading-[27px] laptop:leading-[30px] desktop:leading-9">
-                          ${formatCurrency(1250)}
+                          ${formatCurrency((1250000 / 100) * 0.1)}
                         </span>
                         <span className="py-1.5 desktop:py-2 px-3 desktop:px-3.5 bg-graphite-black ring-1 ring-inset ring-signal-black rounded-md laptop:rounded-[28px] not-italic font-medium text-sm desktop:text-lg leading-[21px] desktop:leading-[27px] text-[#999]">
                           Approximate monthly property tax based on the sale
@@ -199,7 +205,7 @@ export const PricingDetails = () => {
                         Listing Price
                       </span>
                       <span className="not-italic font-semibold text-lg laptop:text-xl desktop:text-2xl leading-[27px] laptop:leading-[30px] desktop:leading-9">
-                        ${formatCurrency(1250000)}
+                        ${formatCurrency(price)}
                       </span>
                     </div>
                     <div className="w-0 border border-signal-black border-solid"></div>
@@ -227,7 +233,7 @@ export const PricingDetails = () => {
                       </span>
                       <div className="flex flex-row items-center gap-3 desktop:gap-4">
                         <span className="not-italic font-semibold text-lg laptop:text-xl desktop:text-2xl leading-[27px] laptop:leading-[30px] desktop:leading-9">
-                          ${formatCurrency(250000)}
+                          ${formatCurrency((price / 100) * 20)}
                         </span>
                         <span className="py-1.5 desktop:py-2 px-3 desktop:px-3.5 bg-graphite-black ring-1 ring-inset ring-signal-black rounded-[28px] not-italic font-medium text-sm desktop:text-lg leading-[21px] desktop:leading-[27px] text-[#999]">
                           20%
@@ -274,7 +280,7 @@ export const PricingDetails = () => {
                         Property Taxes
                       </span>
                       <span className="not-italic font-semibold text-lg laptop:text-xl desktop:text-2xl leading-[27px] laptop:leading-[30px] desktop:leading-9">
-                        ${formatCurrency(1250)}
+                        ${formatCurrency((price / 100) * 0.1)}
                       </span>
                     </div>
                     <div className="w-0 border border-solid border-signal-black"></div>

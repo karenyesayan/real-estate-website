@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Heading from "../page-heading";
 import PropCards from "../property-cards";
+import { Suspense } from "react";
+import { PropertiesSkeleton } from "../skeletons";
 
 export default function Properties() {
   return (
@@ -17,7 +19,9 @@ export default function Properties() {
             View All Properties
           </Link>
         </Heading>
-        <PropCards />
+        <Suspense fallback={<PropertiesSkeleton />}>
+          <PropCards />
+        </Suspense>
       </div>
     </section>
   );

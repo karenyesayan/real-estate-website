@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 "use client";
 
 import {
@@ -14,7 +12,13 @@ import { formatCurrency } from "@/app/lib/utils";
 
 register();
 
-export const ImageGallery = () => {
+export const ImageGallery = ({
+  name,
+  price,
+}: {
+  name: string;
+  price: number;
+}) => {
   const swiperElRef = useRef(null);
 
   return (
@@ -22,7 +26,7 @@ export const ImageGallery = () => {
       <div className="flex items-end md:items-center sm:justify-between pb-[30px] laptop:pb-10 desktop:pb-[50px] pt-[60px] laptop:pt-20 desktop:pt-[120px]">
         <div>
           <h1 className="flex max-sm:flex-col items-start sm:items-center gap-2.5 sm:gap-5 not-italic font-semibold text-xl laptop:text-2xl desktop:text-[30px] leading-[30px] laptop:leading-9 desktop:leading-[45px]">
-            Seaside Serenity Villa
+            {name}
             <span
               className={`not-italic text-sm desktop:text-lg leading-[21px] desktop:leading-[27px] font-medium inline-flex items-center p-2 desktop:p-2.5 ring-1 ring-inset ring-signal-black rounded-md desktop:rounded-lg`}
             >
@@ -36,7 +40,7 @@ export const ImageGallery = () => {
             Price
           </span>
           <p className="not-italic text-lg sm:text-xl desktop:text-2xl leading-[27px] sm:leading-[30px] desktop:leading-9 font-semibold">
-            ${formatCurrency(1250000)}
+            ${formatCurrency(price)}
           </p>
         </div>
       </div>

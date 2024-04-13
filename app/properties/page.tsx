@@ -1,9 +1,11 @@
-import { Metadata } from "next";
 import SearchBar from "../ui/properties/search-bar";
 import Heading from "../ui/page-heading";
 import PropCards from "../ui/property-cards";
 import ContactForm from "../ui/properties/contact-form";
 import CTA from "../ui/cta-section";
+import { Suspense } from "react";
+import { PropertiesSkeleton } from "@/app/ui/skeletons";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Properties",
@@ -34,7 +36,9 @@ export default async function Page() {
           heading="Discover a World of Possibilities"
           paragraph="Our portfolio of properties is as diverse as your dreams. Explore the following categories to find the perfect property that resonates with your vision of home"
         />
-        <PropCards cardType="min" />
+        <Suspense fallback={<PropertiesSkeleton />}>
+          <PropCards cardType="min" />
+        </Suspense>
       </section>
       <ContactForm />
       <CTA />

@@ -24,7 +24,17 @@ const features = [
   },
 ];
 
-export const PropertyDetails = () => {
+export const PropertyDetails = ({
+  name,
+  bedrooms,
+  bathrooms,
+  area,
+}: {
+  name: string;
+  bedrooms: number;
+  bathrooms: number;
+  area: number;
+}) => {
   return (
     <section className="container pt-5 desktop:pt-[30px] grid grid-cols-1 lg:grid-cols-2 items-start gap-5 desktop:gap-[30px]">
       <div className="flex flex-col items-start p-5 xl:p-10 desktop:p-[50px] gap-5 laptop:gap-10 desktop:gap-[50px] ring-1 ring-inset ring-signal-black rounded-[10px] desktop:rounded-xl">
@@ -33,10 +43,10 @@ export const PropertyDetails = () => {
             Description
           </h2>
           <p className="not-italic font-medium text-sm xl:text-base desktop:text-lg leading-[21px] xl:leading-6 desktop:leading-[27px] text-[#999]">
-            Discover your own piece of paradise with the Seaside Serenity Villa.
+            {`Discover your own piece of paradise with the ${name}.
             T With an open floor plan, breathtaking ocean views from every room,
             and direct access to a pristine sandy beach, this property is the
-            epitome of coastal living.
+            epitome of coastal living.`}
           </p>
         </div>
         <div className="w-full sm:h-[75px] desktop:h-[93px] border-t border-signal-black">
@@ -67,7 +77,7 @@ export const PropertyDetails = () => {
                 Bedrooms
               </a>
               <span className="not-italic font-semibold text-lg laptop:text-xl desktop:text-2xl leading-[27px] laptop:leading-[30px] desktop:leading-9 group-hover:text-blue-600">
-                04
+                {bedrooms < 10 ? `0${bedrooms}` : bedrooms}
               </span>
             </div>
             <div className="inline-flex flex-col pl-5 items-start justify-center gap-1.5 xl:gap-2 desktop:gap-2.5 border-l sm:border-e border-signal-black">
@@ -97,7 +107,7 @@ export const PropertyDetails = () => {
                 Bathrooms
               </a>
               <span className="not-italic font-semibold text-lg laptop:text-xl desktop:text-2xl leading-[27px] laptop:leading-[30px] desktop:leading-9 group-hover:text-blue-600">
-                03
+                {bathrooms < 10 ? `0${bathrooms}` : bathrooms}
               </span>
             </div>
             <div className="max-sm:pt-[19.2px] max-sm:border-signal-black max-sm:border-t max-sm:border-solid max-sm:col-span-2 inline-flex flex-col items-start justify-center sm:pl-5 gap-1.5 xl:gap-2 desktop:gap-2.5">
@@ -129,7 +139,7 @@ export const PropertyDetails = () => {
                 Area
               </a>
               <span className="text-nowrap not-italic font-semibold text-lg laptop:text-xl desktop:text-2xl leading-[27px] laptop:leading-[30px] desktop:leading-9 group-hover:text-blue-600">
-                {`${formatCurrency(2500)}  Square Feet`}
+                {`${formatCurrency(area)}  Square Feet`}
               </span>
             </div>
           </div>

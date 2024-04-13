@@ -1,3 +1,5 @@
+"use client";
+
 import {
   ChevronDownIcon,
   MapPinIcon,
@@ -7,11 +9,48 @@ import {
   BanknotesIcon,
 } from "@heroicons/react/24/solid";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { useDebouncedCallback } from "use-debounce";
 
 export default function SearchBar() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const { replace } = useRouter();
+
+  const handleSearch = useDebouncedCallback((key: string, term: string) => {
+    console.log(`Searching... ${term}`);
+
+    const params = new URLSearchParams(searchParams);
+    if (term) {
+      params.set(key, term);
+    } else {
+      params.delete(key);
+    }
+    replace(`${pathname}?${params.toString()}`);
+  }, 300);
+
+  const handleFilter = (key: string, term: string) => {
+    const params = new URLSearchParams(searchParams);
+    if (term) {
+      params.set(key, term);
+    } else {
+      params.delete(key);
+    }
+    replace(`${pathname}?${params.toString()}`);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const params = new URLSearchParams(searchParams);
+    router.push(`/search?${params.toString()}`);
+  };
+
   return (
     <form
+      onSubmit={handleSubmit}
       id="categories"
+      role="search"
       className="max-w-full mx-auto relative lg:top-[-52px] max-lg:pt-10"
     >
       <div className="container flex flex-col max-lg:gap-5 items-center">
@@ -27,7 +66,9 @@ export default function SearchBar() {
             id="property-search"
             className="block border-0 py-[22px] lg:py-[25.5px] desktop:py-[33.5px] w-full z-20 not-italic font-medium text-base xl:text-xl desktop:text-2xl leading-6 xl:leading-[30px] desktop:leading-9 text-[#666666] bg-dark-gray rounded-xl lg:rounded-[12px_12px_0_0] ring-1 ring-inset ring-signal-black shadow-[0_0_0_4px_#191919] lg:shadow-[0_0_0_10px_#191919] focus:ring-2 focus:ring-inset focus:ring-indigo-600 placeholder:text-[#666666]"
             placeholder="Search For A Property"
-            required
+            onChange={(e) => {
+              handleSearch("query", e.target.value);
+            }}
           />
           <button
             type="submit"
@@ -61,10 +102,6 @@ export default function SearchBar() {
                 <option value="" disabled>
                   Location
                 </option>
-                <option value="US">United States</option>
-                <option value="CA">Canada</option>
-                <option value="FR">France</option>
-                <option value="DE">Germany</option>
               </select>
               <div className="pointer-events-none absolute right-3.5 xl:right-5 top-[23.07692308%] desktop:top-[27.77777778%] p-1 bg-graphite-black rounded-[46px]">
                 <ChevronDownIcon
@@ -87,6 +124,9 @@ export default function SearchBar() {
                 <div className="h-[21px] desktop:h-[27px] min-h-[1em] w-px  bg-signal-black"></div>
               </div>
               <select
+                onChange={(e) => {
+                  handleFilter("type", e.target.value);
+                }}
                 id="property"
                 name="property"
                 defaultValue=""
@@ -95,10 +135,7 @@ export default function SearchBar() {
                 <option value="" disabled>
                   Property Type
                 </option>
-                <option value="US">United States</option>
-                <option value="CA">Canada</option>
-                <option value="FR">France</option>
-                <option value="DE">Germany</option>
+                <option value="Villa">Villa</option>
               </select>
               <div className="pointer-events-none absolute right-3.5 xl:right-5 top-[23.07692308%] desktop:top-[27.77777778%] p-1 bg-graphite-black rounded-[46px]">
                 <ChevronDownIcon
@@ -121,6 +158,9 @@ export default function SearchBar() {
                 <div className="h-[21px] desktop:h-[27px] min-h-[1em] w-px  bg-signal-black"></div>
               </div>
               <select
+                onChange={(e) => {
+                  handleFilter("price", e.target.value);
+                }}
                 id="pricing-range"
                 name="pricing-range"
                 defaultValue=""
@@ -129,10 +169,7 @@ export default function SearchBar() {
                 <option value="" disabled>
                   Pricing Range
                 </option>
-                <option value="US">United States</option>
-                <option value="CA">Canada</option>
-                <option value="FR">France</option>
-                <option value="DE">Germany</option>
+                <option value="0-550000">0-550000</option>
               </select>
               <div className="pointer-events-none absolute right-3.5 xl:right-5 top-[23.07692308%] desktop:top-[27.77777778%] p-1 bg-graphite-black rounded-[46px]">
                 <ChevronDownIcon
@@ -155,6 +192,9 @@ export default function SearchBar() {
                 <div className="h-[21px] desktop:h-[27px] min-h-[1em] w-px  bg-signal-black"></div>
               </div>
               <select
+                onChange={(e) => {
+                  handleFilter("size", e.target.value);
+                }}
                 id="property-size"
                 name="property-size"
                 defaultValue=""
@@ -163,10 +203,9 @@ export default function SearchBar() {
                 <option value="" disabled>
                   Property Size
                 </option>
-                <option value="US">United States</option>
-                <option value="CA">Canada</option>
-                <option value="FR">France</option>
-                <option value="DE">Germany</option>
+                <option value="0-2000">0-2000</option>
+                <option value="2000-2500">2000-2500</option>
+                <option value="2500-3000">2500-3000</option>
               </select>
               <div className="pointer-events-none absolute right-3.5 xl:right-5 top-[23.07692308%] desktop:top-[27.77777778%] p-1 bg-graphite-black rounded-[46px]">
                 <ChevronDownIcon
@@ -197,10 +236,6 @@ export default function SearchBar() {
                 <option value="" disabled>
                   Build Year
                 </option>
-                <option value="US">United States</option>
-                <option value="CA">Canada</option>
-                <option value="FR">France</option>
-                <option value="DE">Germany</option>
               </select>
               <div className="pointer-events-none absolute right-3.5 xl:right-5 top-[23.07692308%] desktop:top-[27.77777778%] p-1 bg-graphite-black rounded-[46px]">
                 <ChevronDownIcon

@@ -2,119 +2,122 @@ import { Squares2X2Icon, BoltIcon } from "@heroicons/react/24/outline";
 import { Swiper, SwiperSlide } from "../swiper";
 import Controler from "../slider-controler";
 import Heading from "../page-heading";
+import { fetchClientsList } from "@/app/lib/data";
 
-const clientsList = [
-  {
-    id: "1",
-    date: "2019",
-    name: "ABC Corporation",
-    href: "https://somesite.net/",
-    domain: "Commercial Real Estate",
-    category: "Luxury Home Development",
-    description: `Estatein's expertise in finding the perfect office space for our expanding operations was invaluable. They truly understand our business needs.`,
-  },
-  {
-    id: "2",
-    date: "2018",
-    name: "GreenTech Enterprises",
-    href: "https://somesite.net/",
-    domain: "Commercial Real Estate",
-    category: "Retail Space",
-    description: `Estatein's ability to identify prime retail locations helped us expand our brand presence. They are a trusted partner in our growth.`,
-  },
-  {
-    id: "3",
-    date: "2019",
-    name: "ABC Corporation",
-    href: "https://somesite.net/",
-    domain: "Commercial Real Estate",
-    category: "Luxury Home Development",
-    description: `Estatein's expertise in finding the perfect office space for our expanding operations was invaluable. They truly understand our business needs.`,
-  },
-  {
-    id: "4",
-    date: "2018",
-    name: "GreenTech Enterprises",
-    href: "https://somesite.net/",
-    domain: "Commercial Real Estate",
-    category: "Retail Space",
-    description: `Estatein's ability to identify prime retail locations helped us expand our brand presence. They are a trusted partner in our growth.`,
-  },
-  {
-    id: "5",
-    date: "2019",
-    name: "ABC Corporation",
-    href: "https://somesite.net/",
-    domain: "Commercial Real Estate",
-    category: "Luxury Home Development",
-    description: `Estatein's expertise in finding the perfect office space for our expanding operations was invaluable. They truly understand our business needs.`,
-  },
-  {
-    id: "6",
-    date: "2018",
-    name: "GreenTech Enterprises",
-    href: "https://somesite.net/",
-    domain: "Commercial Real Estate",
-    category: "Retail Space",
-    description: `Estatein's ability to identify prime retail locations helped us expand our brand presence. They are a trusted partner in our growth.`,
-  },
-  {
-    id: "7",
-    date: "2019",
-    name: "ABC Corporation",
-    href: "https://somesite.net/",
-    domain: "Commercial Real Estate",
-    category: "Luxury Home Development",
-    description: `Estatein's expertise in finding the perfect office space for our expanding operations was invaluable. They truly understand our business needs.`,
-  },
-  {
-    id: "8",
-    date: "2018",
-    name: "GreenTech Enterprises",
-    href: "https://somesite.net/",
-    domain: "Commercial Real Estate",
-    category: "Retail Space",
-    description: `Estatein's ability to identify prime retail locations helped us expand our brand presence. They are a trusted partner in our growth.`,
-  },
-  {
-    id: "9",
-    date: "2019",
-    name: "ABC Corporation",
-    href: "https://somesite.net/",
-    domain: "Commercial Real Estate",
-    category: "Luxury Home Development",
-    description: `Estatein's expertise in finding the perfect office space for our expanding operations was invaluable. They truly understand our business needs.`,
-  },
-  {
-    id: "10",
-    date: "2018",
-    name: "GreenTech Enterprises",
-    href: "https://somesite.net/",
-    domain: "Commercial Real Estate",
-    category: "Retail Space",
-    description: `Estatein's ability to identify prime retail locations helped us expand our brand presence. They are a trusted partner in our growth.`,
-  },
-  {
-    id: "11",
-    date: "2019",
-    name: "ABC Corporation",
-    href: "https://somesite.net/",
-    domain: "Commercial Real Estate",
-    category: "Luxury Home Development",
-    description: `Estatein's expertise in finding the perfect office space for our expanding operations was invaluable. They truly understand our business needs.`,
-  },
-  {
-    id: "12",
-    date: "2018",
-    name: "GreenTech Enterprises",
-    href: "https://somesite.net/",
-    domain: "Commercial Real Estate",
-    category: "Retail Space",
-    description: `Estatein's ability to identify prime retail locations helped us expand our brand presence. They are a trusted partner in our growth.`,
-  },
-];
+// const clientsList = [
+//   {
+//     id: "1",
+//     date: "2019",
+//     name: "ABC Corporation",
+//     href: "https://somesite.net/",
+//     domain: "Commercial Real Estate",
+//     category: "Luxury Home Development",
+//     description: `Estatein's expertise in finding the perfect office space for our expanding operations was invaluable. They truly understand our business needs.`,
+//   },
+//   {
+//     id: "2",
+//     date: "2018",
+//     name: "GreenTech Enterprises",
+//     href: "https://somesite.net/",
+//     domain: "Commercial Real Estate",
+//     category: "Retail Space",
+//     description: `Estatein's ability to identify prime retail locations helped us expand our brand presence. They are a trusted partner in our growth.`,
+//   },
+//   {
+//     id: "3",
+//     date: "2019",
+//     name: "ABC Corporation",
+//     href: "https://somesite.net/",
+//     domain: "Commercial Real Estate",
+//     category: "Luxury Home Development",
+//     description: `Estatein's expertise in finding the perfect office space for our expanding operations was invaluable. They truly understand our business needs.`,
+//   },
+//   {
+//     id: "4",
+//     date: "2018",
+//     name: "GreenTech Enterprises",
+//     href: "https://somesite.net/",
+//     domain: "Commercial Real Estate",
+//     category: "Retail Space",
+//     description: `Estatein's ability to identify prime retail locations helped us expand our brand presence. They are a trusted partner in our growth.`,
+//   },
+//   {
+//     id: "5",
+//     date: "2019",
+//     name: "ABC Corporation",
+//     href: "https://somesite.net/",
+//     domain: "Commercial Real Estate",
+//     category: "Luxury Home Development",
+//     description: `Estatein's expertise in finding the perfect office space for our expanding operations was invaluable. They truly understand our business needs.`,
+//   },
+//   {
+//     id: "6",
+//     date: "2018",
+//     name: "GreenTech Enterprises",
+//     href: "https://somesite.net/",
+//     domain: "Commercial Real Estate",
+//     category: "Retail Space",
+//     description: `Estatein's ability to identify prime retail locations helped us expand our brand presence. They are a trusted partner in our growth.`,
+//   },
+//   {
+//     id: "7",
+//     date: "2019",
+//     name: "ABC Corporation",
+//     href: "https://somesite.net/",
+//     domain: "Commercial Real Estate",
+//     category: "Luxury Home Development",
+//     description: `Estatein's expertise in finding the perfect office space for our expanding operations was invaluable. They truly understand our business needs.`,
+//   },
+//   {
+//     id: "8",
+//     date: "2018",
+//     name: "GreenTech Enterprises",
+//     href: "https://somesite.net/",
+//     domain: "Commercial Real Estate",
+//     category: "Retail Space",
+//     description: `Estatein's ability to identify prime retail locations helped us expand our brand presence. They are a trusted partner in our growth.`,
+//   },
+//   {
+//     id: "9",
+//     date: "2019",
+//     name: "ABC Corporation",
+//     href: "https://somesite.net/",
+//     domain: "Commercial Real Estate",
+//     category: "Luxury Home Development",
+//     description: `Estatein's expertise in finding the perfect office space for our expanding operations was invaluable. They truly understand our business needs.`,
+//   },
+//   {
+//     id: "10",
+//     date: "2018",
+//     name: "GreenTech Enterprises",
+//     href: "https://somesite.net/",
+//     domain: "Commercial Real Estate",
+//     category: "Retail Space",
+//     description: `Estatein's ability to identify prime retail locations helped us expand our brand presence. They are a trusted partner in our growth.`,
+//   },
+//   {
+//     id: "11",
+//     date: "2019",
+//     name: "ABC Corporation",
+//     href: "https://somesite.net/",
+//     domain: "Commercial Real Estate",
+//     category: "Luxury Home Development",
+//     description: `Estatein's expertise in finding the perfect office space for our expanding operations was invaluable. They truly understand our business needs.`,
+//   },
+//   {
+//     id: "12",
+//     date: "2018",
+//     name: "GreenTech Enterprises",
+//     href: "https://somesite.net/",
+//     domain: "Commercial Real Estate",
+//     category: "Retail Space",
+//     description: `Estatein's ability to identify prime retail locations helped us expand our brand presence. They are a trusted partner in our growth.`,
+//   },
+// ];
 
-export default function Clients() {
+export default async function Clients() {
+  const clientsList = await fetchClientsList();
+
   return (
     <section id="clients" className="md:mb-[54px]">
       <div className="container">
@@ -170,10 +173,10 @@ export default function Clients() {
                   <div className="max-lg:items-stretch flex flex-col lg:flex-row justify-center lg:justify-between items-start lg:items-center w-full max-lg:gap-5">
                     <div className="flex flex-col items-start gap-0.5 laptop:gap-1 desktop:gap-1.5">
                       <time
-                        dateTime={client.date}
+                        dateTime={client.cld}
                         className="not-italic font-medium text-sm xl:text-base desktop:text-lg leading-[27px] desktop:leading-[27px] text-[#999]"
                       >
-                        Since {client.date}
+                        Since {client.cld}
                       </time>
                       <h3 className="not-italic text-xl xl:text-2xl desktop:text-3xl leading-[30px] xl:leading-9 desktop:leading-[45px] font-semibold  group-hover:text-gray-600">
                         <a

@@ -1,38 +1,41 @@
 import Image from "next/image";
 import Heading from "../page-heading";
+import { fetchPeople } from "@/app/lib/data";
 
-const people = [
-  {
-    id: "1",
-    name: "Max Mitchell",
-    role: "Founder",
-    profile: "furni",
-    imageUrl: "/avatar1.png",
-  },
-  {
-    id: "2",
-    name: "Sarah Johnson",
-    role: "Chief Real Estate Officer",
-    profile: "furni",
-    imageUrl: "/avatar2.png",
-  },
-  {
-    id: "3",
-    name: "David Brown",
-    role: "Head of Property Management",
-    profile: "furni",
-    imageUrl: "/avatar3.png",
-  },
-  {
-    id: "4",
-    name: "Michael Turner",
-    role: "Legal Counsel",
-    profile: "furni",
-    imageUrl: "/avatar4.png",
-  },
-];
+// const people = [
+//   {
+//     id: "1",
+//     name: "Max Mitchell",
+//     role: "Founder",
+//     profile: "furni",
+//     imageUrl: "/avatar1.png",
+//   },
+//   {
+//     id: "2",
+//     name: "Sarah Johnson",
+//     role: "Chief Real Estate Officer",
+//     profile: "furni",
+//     imageUrl: "/avatar2.png",
+//   },
+//   {
+//     id: "3",
+//     name: "David Brown",
+//     role: "Head of Property Management",
+//     profile: "furni",
+//     imageUrl: "/avatar3.png",
+//   },
+//   {
+//     id: "4",
+//     name: "Michael Turner",
+//     role: "Legal Counsel",
+//     profile: "furni",
+//     imageUrl: "/avatar4.png",
+//   },
+// ];
 
-export default function Team() {
+export default async function Team() {
+  const people = await fetchPeople();
+
   return (
     <section
       id="team"
@@ -50,8 +53,8 @@ export default function Team() {
           >
             <div className="mx-auto mb-10 laptop:mb-[50px] max-w-[318px] h-[268px] lg:h-[220px] lg:w-[257px] desktop:h-[253px] desktop:w-[316.75px]">
               <Image
-                // src={person.image_url}
-                src={person.imageUrl}
+                src={person.image_url}
+                // src={person.imageUrl}
                 width={317}
                 height={253}
                 className="h-full w-full object-cover rounded-[10px] desktop:rounded-xl"
