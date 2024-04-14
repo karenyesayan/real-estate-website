@@ -6,165 +6,6 @@ import { Swiper, SwiperSlide } from "./swiper";
 import Controler from "./slider-controler";
 import { fetchProperties } from "../lib/data";
 
-// const properties = [
-//   {
-//     id: "1",
-//     type: "Villa",
-//     name: "Seaside Serenity Villa",
-//     href: "#",
-//     description:
-//       "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... ",
-//     shortDescription: "Coastal Escapes - Where Waves Beckon",
-//     bedrooms: 4,
-//     bathrooms: 3,
-//     price: 550000,
-//     imageUrl: "/seaside-villa.png",
-//   },
-//   {
-//     id: "2",
-//     type: "Villa",
-//     name: "Metropolitan Haven",
-//     href: "#",
-//     description:
-//       "A chic and fully-furnished 2-bedroom apartment with panoramic city views... ",
-//     shortDescription: "Urban Oasis - Life in the Heart of the City",
-//     bedrooms: 2,
-//     bathrooms: 2,
-//     price: 550000,
-//     imageUrl: "/metropolitan.png",
-//   },
-//   {
-//     id: "3",
-//     type: "Villa",
-//     name: "Rustic Retreat Cottage",
-//     href: "#",
-//     description:
-//       "An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community... ",
-//     shortDescription: "Countryside Charm - Escape to Nature's Embrace",
-//     bedrooms: 3,
-//     bathrooms: 3,
-//     price: 550000,
-//     imageUrl: "/rustic-cottage.png",
-//   },
-//   {
-//     id: "4",
-//     type: "Villa",
-//     name: "Seaside Serenity Villa",
-//     href: "#",
-//     description:
-//       "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... ",
-//     shortDescription: "Coastal Escapes - Where Waves Beckon",
-//     bedrooms: 4,
-//     bathrooms: 3,
-//     price: 550000,
-//     imageUrl: "/seaside-villa.png",
-//   },
-//   {
-//     id: "5",
-//     type: "Villa",
-//     name: "Metropolitan Haven",
-//     href: "#",
-//     description:
-//       "A chic and fully-furnished 2-bedroom apartment with panoramic city views... ",
-//     shortDescription: "Urban Oasis - Life in the Heart of the City",
-//     bedrooms: 2,
-//     bathrooms: 2,
-//     price: 550000,
-//     imageUrl: "/metropolitan.png",
-//   },
-//   {
-//     id: "6",
-//     type: "Villa",
-//     name: "Rustic Retreat Cottage",
-//     href: "#",
-//     description:
-//       "An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community... ",
-//     shortDescription: "Countryside Charm - Escape to Nature's Embrace",
-//     bedrooms: 3,
-//     bathrooms: 3,
-//     price: 550000,
-//     imageUrl: "/rustic-cottage.png",
-//   },
-//   {
-//     id: "7",
-//     type: "Villa",
-//     name: "Seaside Serenity Villa",
-//     href: "#",
-//     description:
-//       "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... ",
-//     shortDescription: "Coastal Escapes - Where Waves Beckon",
-//     bedrooms: 4,
-//     bathrooms: 3,
-//     price: 550000,
-//     imageUrl: "/seaside-villa.png",
-//   },
-//   {
-//     id: "8",
-//     type: "Villa",
-//     name: "Metropolitan Haven",
-//     href: "#",
-//     description:
-//       "A chic and fully-furnished 2-bedroom apartment with panoramic city views... ",
-//     shortDescription: "Urban Oasis - Life in the Heart of the City",
-//     bedrooms: 2,
-//     bathrooms: 2,
-//     price: 550000,
-//     imageUrl: "/metropolitan.png",
-//   },
-//   {
-//     id: "9",
-//     type: "Villa",
-//     name: "Rustic Retreat Cottage",
-//     href: "#",
-//     description:
-//       "An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community... ",
-//     shortDescription: "Countryside Charm - Escape to Nature's Embrace",
-//     bedrooms: 3,
-//     bathrooms: 3,
-//     price: 550000,
-//     imageUrl: "/rustic-cottage.png",
-//   },
-//   {
-//     id: "10",
-//     type: "Villa",
-//     name: "Seaside Serenity Villa",
-//     href: "#",
-//     description:
-//       "A stunning 4-bedroom, 3-bathroom villa in a peaceful suburban neighborhood... ",
-//     shortDescription: "Coastal Escapes - Where Waves Beckon",
-//     bedrooms: 4,
-//     bathrooms: 3,
-//     price: 550000,
-//     imageUrl: "/seaside-villa.png",
-//   },
-//   {
-//     id: "11",
-//     type: "Villa",
-//     name: "Metropolitan Haven",
-//     href: "#",
-//     description:
-//       "A chic and fully-furnished 2-bedroom apartment with panoramic city views... ",
-//     shortDescription: "Urban Oasis - Life in the Heart of the City",
-//     bedrooms: 2,
-//     bathrooms: 2,
-//     price: 550000,
-//     imageUrl: "/metropolitan.png",
-//   },
-//   {
-//     id: "12",
-//     type: "Villa",
-//     name: "Rustic Retreat Cottage",
-//     href: "#",
-//     description:
-//       "An elegant 3-bedroom, 2.5-bathroom townhouse in a gated community... ",
-//     shortDescription: "Countryside Charm - Escape to Nature's Embrace",
-//     bedrooms: 3,
-//     bathrooms: 3,
-//     price: 550000,
-//     imageUrl: "/rustic-cottage.png",
-//   },
-// ];
-
 export default async function PropCards({ cardType }: { cardType?: string }) {
   const properties = await fetchProperties();
 
@@ -232,7 +73,6 @@ export default async function PropCards({ cardType }: { cardType?: string }) {
               >
                 <Image
                   src={property.image_url}
-                  // src={property.imageUrl}
                   alt={`${property.name} image`}
                   width={432}
                   height={318}
@@ -243,7 +83,6 @@ export default async function PropCards({ cardType }: { cardType?: string }) {
                 {cardType && (
                   <span className="line-clamp-1 max-w-fit mb-4 desktop:mb-5 p-1.5 desktop:p-2 px-3 desktop:px-3.5 bg-graphite-black ring-1 ring-inset ring-signal-black rounded-[28px] not-italic font-medium text-sm desktop:text-lg leading-[21px] desktop:leading-[27px]">
                     {property.short_description}
-                    {/* {property.shortDescription} */}
                   </span>
                 )}
                 <Link href="#">

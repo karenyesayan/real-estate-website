@@ -4,12 +4,12 @@ import {
   MapPinIcon,
   ArrowUpRightIcon,
 } from "@heroicons/react/24/solid";
-import { Metadata } from "next";
-import Link from "next/link";
 import ContactSection from "../ui/contact/contact-section";
 import OurOffices from "../ui/contact/our-offices";
 import Gallery from "../ui/contact/gallery";
 import CTA from "../ui/cta-section";
+import Link from "next/link";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact",

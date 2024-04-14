@@ -1,9 +1,9 @@
-import { Metadata } from "next";
 import NavClouds from "../ui/nav-clouds";
 import ServicesValues from "../ui/services/services-values";
 import ManagementFeatures from "../ui/services/management-features";
 import InvestmentsFeatures from "../ui/services/investments-features";
 import CTA from "../ui/cta-section";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Services",

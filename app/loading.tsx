@@ -1,5 +1,4 @@
 export default function Loading() {
-  //   return <h2 className="global">Loading...</h2>;
   return (
     <main>
       <div className="container h-96 flex items-center justify-center">
