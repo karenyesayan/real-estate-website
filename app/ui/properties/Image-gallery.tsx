@@ -73,14 +73,14 @@ export const ImageGallery = ({
           >
             <swiper-slide>
               <Image
-                src="/image.png"
+                src="/Image.png"
                 alt="property image desktop version"
                 width={144}
                 height={94}
                 className="hidden xs:block rounded-md lg:rounded-lg h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={67}
                 height={41}
                 alt="property image mobile version"
@@ -89,14 +89,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image1.png"
+                src="/Image1.png"
                 alt="property image desktop version"
                 width={144}
                 height={94}
                 className="hidden xs:block rounded-md lg:rounded-lg h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={67}
                 height={41}
                 alt="property image mobile version"
@@ -105,14 +105,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image.png"
+                src="/Image.png"
                 alt="property image desktop version"
                 width={144}
                 height={94}
                 className="hidden xs:block rounded-md lg:rounded-lg h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={67}
                 height={41}
                 alt="property image mobile version"
@@ -121,14 +121,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image1.png"
+                src="/Image1.png"
                 alt="property image desktop version"
                 width={144}
                 height={94}
                 className="hidden xs:block rounded-md lg:rounded-lg h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={67}
                 height={41}
                 alt="property image mobile version"
@@ -137,14 +137,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image.png"
+                src="/Image.png"
                 alt="property image desktop version"
                 width={144}
                 height={94}
                 className="hidden xs:block rounded-md lg:rounded-lg h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={67}
                 height={41}
                 alt="property image mobile version"
@@ -153,14 +153,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image1.png"
+                src="/Image1.png"
                 alt="property image desktop version"
                 width={144}
                 height={94}
                 className="hidden xs:block rounded-md lg:rounded-lg h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={67}
                 height={41}
                 alt="property image mobile version"
@@ -169,14 +169,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image.png"
+                src="/Image.png"
                 alt="property image desktop version"
                 width={144}
                 height={94}
                 className="hidden xs:block rounded-md lg:rounded-lg h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={67}
                 height={41}
                 alt="property image mobile version"
@@ -185,14 +185,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image1.png"
+                src="/Image1.png"
                 alt="property image desktop version"
                 width={144}
                 height={94}
                 className="hidden xs:block rounded-md lg:rounded-lg h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={67}
                 height={41}
                 alt="property image mobile version"
@@ -201,14 +201,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image.png"
+                src="/Image.png"
                 alt="property image desktop version"
                 width={144}
                 height={94}
                 className="hidden xs:block rounded-md lg:rounded-lg h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={67}
                 height={41}
                 alt="property image mobile version"
@@ -217,14 +217,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image1.png"
+                src="/Image1.png"
                 alt="property image desktop version"
                 width={144}
                 height={94}
                 className="hidden xs:block rounded-md lg:rounded-lg h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={67}
                 height={41}
                 alt="property image mobile version"
@@ -268,14 +268,14 @@ export const ImageGallery = ({
           >
             <swiper-slide>
               <Image
-                src="/image.png"
+                src="/Image.png"
                 alt="property image desktop version"
                 width={733}
                 height={583}
                 className="hidden xs:block rounded-[10px] h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={318}
                 height={249}
                 alt="property image mobile version"
@@ -284,14 +284,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image1.png"
+                src="/Image1.png"
                 alt="property image desktop version"
                 width={733}
                 height={583}
                 className="hidden xs:block rounded-[10px] h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={318}
                 height={249}
                 alt="property image mobile version"
@@ -300,14 +300,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image.png"
+                src="/Image.png"
                 alt="property image desktop version"
                 width={733}
                 height={583}
                 className="hidden xs:block rounded-[10px] h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={318}
                 height={249}
                 alt="property image mobile version"
@@ -316,14 +316,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image1.png"
+                src="/Image1.png"
                 alt="property image desktop version"
                 width={733}
                 height={583}
                 className="hidden xs:block rounded-[10px] h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={318}
                 height={249}
                 alt="property image mobile version"
@@ -332,14 +332,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image.png"
+                src="/Image.png"
                 alt="property image desktop version"
                 width={733}
                 height={583}
                 className="hidden xs:block rounded-[10px] h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={318}
                 height={249}
                 alt="property image mobile version"
@@ -348,14 +348,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image1.png"
+                src="/Image1.png"
                 alt="property image desktop version"
                 width={733}
                 height={583}
                 className="hidden xs:block rounded-[10px] h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={318}
                 height={249}
                 alt="property image mobile version"
@@ -364,14 +364,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image.png"
+                src="/Image.png"
                 alt="property image desktop version"
                 width={733}
                 height={583}
                 className="hidden xs:block rounded-[10px] h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={318}
                 height={249}
                 alt="property image mobile version"
@@ -380,14 +380,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image1.png"
+                src="/Image1.png"
                 alt="property image desktop version"
                 width={733}
                 height={583}
                 className="hidden xs:block rounded-[10px] h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={318}
                 height={249}
                 alt="property image mobile version"
@@ -396,14 +396,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image.png"
+                src="/Image.png"
                 alt="property image desktop version"
                 width={733}
                 height={583}
                 className="hidden xs:block rounded-[10px] h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={318}
                 height={249}
                 alt="property image mobile version"
@@ -412,14 +412,14 @@ export const ImageGallery = ({
             </swiper-slide>
             <swiper-slide>
               <Image
-                src="/image1.png"
+                src="/Image1.png"
                 alt="property image desktop version"
                 width={733}
                 height={583}
                 className="hidden xs:block rounded-[10px] h-full w-full object-cover"
               />
               <Image
-                src="/image1-mobile.png"
+                src="/Image1-mobile.png"
                 width={318}
                 height={249}
                 alt="property image mobile version"
