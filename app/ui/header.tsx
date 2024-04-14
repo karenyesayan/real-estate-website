@@ -115,7 +115,11 @@ export default function Header() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-graphite-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5">
+            <Link
+              onClick={() => setMobileMenuOpen(false)}
+              href="/"
+              className="-m-1.5 p-1.5"
+            >
               <span className="sr-only">Estatein</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -145,6 +149,7 @@ export default function Header() {
                 {links.map((link, index) => {
                   return (
                     <Link
+                      onClick={() => setMobileMenuOpen(false)}
                       key={index.toString()}
                       href={link.href}
                       className={clsx(
@@ -158,6 +163,7 @@ export default function Header() {
               </div>
               <div className="py-6">
                 <Link
+                  onClick={() => setMobileMenuOpen(false)}
                   href="/contact"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 hover:bg-dark-gray hover:text-violet-600"
                 >

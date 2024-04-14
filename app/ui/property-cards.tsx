@@ -68,7 +68,7 @@ export default async function PropCards({ cardType }: { cardType?: string }) {
           <SwiperSlide key={property.id}>
             <div className="p-6 sm:p-[30px] desktop:p-10 flex-[1_0_0%] gap-4 sm:gap-5 desktop:gap-[30px] flex flex-col ring-1 ring-signal-black ring-inset rounded-xl opacity-85 transition duration-300 ease-in-out hover:opacity-100 hover:ring-blue-700">
               <Link
-                href="#"
+                href={`properties/${property.id}`}
                 className="max-xs:max-w-full h-[210px] xs:h-[255px] desktop:max-w-[432px] desktop:h-full"
               >
                 <Image
@@ -85,7 +85,7 @@ export default async function PropCards({ cardType }: { cardType?: string }) {
                     {property.short_description}
                   </span>
                 )}
-                <Link href="#">
+                <Link href={`properties/${property.id}`}>
                   <h5 className="leading-[150%] sm:leading-[150%] desktop:leading-[150%] text-lg sm:text-xl desktop:text-2xl not-italic font-semibold">
                     {property.name}
                   </h5>
@@ -99,7 +99,10 @@ export default async function PropCards({ cardType }: { cardType?: string }) {
                   )}
                 >
                   {property.description}
-                  <Link className="text-white underline" href="#">
+                  <Link
+                    className="text-white underline"
+                    href={`properties/${property.id}`}
+                  >
                     Read More
                   </Link>
                 </p>
@@ -184,7 +187,7 @@ export default async function PropCards({ cardType }: { cardType?: string }) {
                     </p>
                   </div>
                   <Link
-                    href="#"
+                    href={`properties/${property.id}`}
                     className="whitespace-nowrap text-center flex-[1_0_0%] py-3.5 desktop:py-[18px] px-5 desktop:px-6 rounded-lg desktop:rounded-[10px] bg-[#703BF7] text-sm desktop:text-lg not-italic font-medium leading-[150%] desktop:leading-[150%] transition-colors hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                   >
                     View Property Details
