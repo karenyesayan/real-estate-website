@@ -39,7 +39,7 @@ Design & Template
 Assets
 
 - Icons: [Heroicons](https://github.com/tailwindlabs/heroicons)
-- Fonts: [Montserrat](https://fonts.google.com/specimen/Urbanist/about?query=Urbanist)
+- Fonts: [Urbanist](https://fonts.google.com/specimen/Urbanist/about?query=Urbanist)
 
 Other
 
